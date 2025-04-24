@@ -8,12 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    <p>Ceci est une page de contenu</p>
 </body>
 </html>
-<?php
-include_once("includes/connexionBDD.php");
-if (isset($dbh)){
-    echo "c'est un bon début";
-}
-?>
+

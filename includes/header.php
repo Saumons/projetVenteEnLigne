@@ -6,14 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../style2.css">
+    <?php
+    include_once("connexionBDD.php");
+    ?>
 </head>
-<body>
 
-</body>
-</html>
-<?php
-include_once("includes/connexionBDD.php");
-if (isset($dbh)){
-    echo "c'est un bon début";
-}
-?>
+
