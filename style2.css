@@ -286,3 +286,65 @@ input:focus, textarea:focus {
     box-shadow: 0 0 10px #0ff;
 }
 
+
+/*CSS du carrousel*/
+#c2carrousel img{max-width:250px;max-height:250px;margin:auto;}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.arrow-left {
+    left: 0;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.arrow-right {
+    right: 0;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.arrow span {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Affiche les flèches au survol (PC) */
+.image-container:hover .arrow {
+    opacity: 1;
+}
+
+/* Affiche toujours les flèches sur les petits écrans (mobiles) */
+@media (hover: none) and (pointer: coarse) {
+    .arrow {
+        opacity: 1;
+    }
+}
+

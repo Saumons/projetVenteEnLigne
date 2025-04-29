@@ -42,7 +42,7 @@ if (document.getElementById("BouttonMDP")!= null) {
         }
     });
 }
-
+//A CORRIGER
 if (document.getElementById("bouttonLogout")!= null) {
     let bouttonNVCompte = document.getElementById("bouttonLogout")
     bouttonNVCompte.addEventListener("click", () => {

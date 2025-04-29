@@ -1,3 +1,13 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style2.css">
+    <title>Inscription</title>
+</head>
 <?php
     include ("includes/header.php");
     if (isset($dbh)) {
@@ -30,6 +40,7 @@
                 header('Location: connexion.php');
             }
 
+            //Champ vide ou mot de passe non identique
             else {
                     $messages[] = "<p style='color:red;'>Les champs doivent être remplis et les mots de passe identiques.</p>";
                     sleep(2);
@@ -49,14 +60,26 @@
 </head>
 <body>
 <form method="post" class = "Connex_Inscr">
+
+    <!--Mail-->
     <label for="mail">E-Mail :</label>
     <input type="text" name="mail" id="mail" maxlength="25" size="25" placeholder="exemple@nomdedomaine.fr" required/>
+
+    <!--Mot de passe-->
     <label for="mdp">Mot de passe :</label>
     <input name="mdp" id="mdp" type="password" pattern="^[a-zA-Z' \-]+$" class="input-mdp" maxlength="25" size="25" placeholder="Entrez votre mot de passe" required >
+
+    <!--Confirmation mot de passe-->
     <label for="mdpConf">Confirmation du mot de passe :</label>
     <input name="mdpConf" id="mdpConf" type="password" pattern="^[a-zA-Z' \-]+$" class="input-mdp" maxlength="25" size="25" placeholder="Entrez à nouveau votre mot de passe" required >
+
+    <!--Bouton afficher mot de passe-->
     <input type="button" value="Afficher le mot de passe" id="BouttonMDP" class = "boutton"></input>
+
+    <!--Bouton valider-->
     <input type="submit" value="Valider" class = "boutton">
+
+    <!--Bouton connexion-->
     <label for="bouttonDejaCompte" class = "BCompte" >Vous avez déjà un compte :</label>
     <input type="button" id="bouttonDejaCompte" value="Connectez-vous">
 
